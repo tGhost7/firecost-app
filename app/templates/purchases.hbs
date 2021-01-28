@@ -1,0 +1,22 @@
+{{page-title "Purchases"}}
+
+<div class="container">
+    <h3>Add Purchase</h3>
+    <div class="input-field">
+        {{input placeholder="Purchase Name" type="text" class="validate" value=purchaseName}}
+        {{input placeholder="Purchase Price" type="text" class="validate" value=purchasePrice}}
+    </div>
+
+    <a class="waves-effect waves-light btn" {{on 'click' this.addPurchase}}>Add Purchase</a>
+
+    <h3 style="margin-top: 75px;">My Purchases</h3>
+    {{#each @purchases as |purchase|}}
+        <li>
+            <strong>{{purchase.id}}</strong>
+            <span>{{purchase.name}}</span>
+            <i>{{purchase.price}}</i>
+        </li>
+    {{/each}}
+</div>
+
+{{outlet}}
