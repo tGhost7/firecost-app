@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 import { tracked } from '@glimmer/tracking';
-import { TrackedArray } from 'tracked-built-ins';
+import { TrackedArray, TrackedObject } from 'tracked-built-ins';
 import { action } from '@ember/object';
 
 function getRandomInt(min, max) {
@@ -16,7 +16,8 @@ export default class PurchasesController extends Controller {
     addPurchase() {
         var pname = this.purchaseName;
         var pprice = this.purchasePrice;
-        this.purchases.pushObject({ id: getRandomInt(0, 99), name: pname, price: pprice });
+        this.purchases.push({ id: getRandomInt(0, 99), name: pname, price: pprice });
+        this.purchases = {id: 1, name: "", price: ""}
         console.log(this.purchases);
     }
 }

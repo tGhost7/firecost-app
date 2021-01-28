@@ -10,11 +10,11 @@
     <a class="waves-effect waves-light btn" {{on 'click' this.addPurchase}}>Add Purchase</a>
 
     <h3 style="margin-top: 75px;">My Purchases</h3>
-    {{#each @purchases as |purchase|}}
+    {{#each purchases as |purchase|}}
         <li>
-            <strong>{{purchase.id}}</strong>
-            <span>{{purchase.name}}</span>
-            <i>{{purchase.price}}</i>
+            <strong>{{purchase}}</strong>
+            <span>{{purchase}}</span>
+            <i>{{purchase}}</i>
         </li>
     {{/each}}
 </div>
