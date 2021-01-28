@@ -17,7 +17,6 @@ export default class PurchasesController extends Controller {
         var pname = this.purchaseName;
         var pprice = this.purchasePrice;
         this.purchases.push({ id: getRandomInt(0, 99), name: pname, price: pprice });
-        this.purchases = {id: 1, name: "", price: ""}
         console.log(this.purchases);
     }
 }
